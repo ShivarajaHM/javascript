@@ -1,3 +1,20 @@
+/******************************************************************************
+ *  Execution       :   1. default node          : cmd> node node tictactoe.js
+ *                      
+ * 
+ *  Purpose         : Program to play a Cross Game or Tic-Tac-Toe Game. Player 1
+ * 					  is the Computer and the Player 2 is the user. Player 1 take 
+ * 					  Random Cell that is the Column and Row. 
+ * 
+ *  @description    
+ * 
+ *  @file           : tictactoe.js
+ *  @overview       : Print the Col and the Cell after every step
+ *  @author         : Shivaraja H M <shivumgc@gmail.com>
+ *  @version        : 1.0
+ *  @since          : 06-feb-2019
+ *
+ ******************************************************************************/
 var tic=require('../Utility/utility')
 const readline=require('readline-sync')
 function ticTacToe(){
