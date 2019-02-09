@@ -1,7 +1,7 @@
 const readline=require('readline-sync');
 
 module.exports={
-
+//--------------------------------BUSINESS LOGIC'S----------------------------------------
 /************************************* Flip Coin *****************************************/ 
 /* Flip Coin
 *---------------
@@ -79,8 +79,7 @@ the value of two's power i.e., 2^N value.
 /* 5. Harmonic Number 
 *--------------------
 * @purpose : To generate Harmonic numbersTo Accept value of "N" from user and prints a table of the powers of 2 
-*that are less than or equal to 2^N. value of N should be less then 31. to the given user input and print the Nth harmonic number
-*for the user input.
+*that are less than or equal to 2^N. 
 *
 * @description : To generate sum of harmonic numbers by accepting input from user.
 *                
@@ -320,11 +319,12 @@ the start and end clicks
 //************************************* Tic-Tac-Toe ***************************************/
 /*14. Tic-Tac-Toe
 *-----------------
-* @purpose : A Stopwatch Program for measuring the time that elapses between 
-the start and end clicks
+* @purpose : Program to play a Cross Game or Tic-Tac-Toe Game. 
 *
 *
-* @description :Measure the elapsed time between start and end.
+* @description : Program to play a Cross Game or Tic-Tac-Toe Game. Player 1 is the 
+* Computer and the Player 2 is the user. Player 1 take Random Cell that is the Column
+* and Row. 
 *                
 */
     intializeGame() 
@@ -557,7 +557,15 @@ isAnagram(a,b){
     },
 
 /************************************ is Palimdrome **********************************/
-
+/* Is Palindrome
+*
+* Purpose      : Use the random number that should print in the reverse order . then, the 
+* reverse ordered string or number must be equal to given user input.it is similar to anagram
+*
+*  @descriptipn: Declaring the function and passing the userinput as argument.
+*  @function   : Diplayname takes the userinput and print it with palinddrome.
+             
+*/
     isPalimdrome(string1){
         var str = "";
         for (let index = 0; index < string1.length; index++){
@@ -612,7 +620,13 @@ isAnagram(a,b){
     },
 
 /* ************************* It is anagrampalindrome or not ****************************/
-    
+/* Is Prime2String
+
+* Purpose      : Prints anagram palindrome numbers.
+*
+*  @descriptipn: To prints 1 to 1000 between Prime anagram palindrome numbers.
+*             
+*/
     isAnagramPalimdrome(){
         var arr=[];
         for (let index = 0; index < 1000; index++) 
@@ -639,7 +653,16 @@ isAnagram(a,b){
     },
 
 /************************************ Find Number **********************************/
-     
+/* To find a number 
+----------------------
+----------------------
+* Purpose      : It is going to find the number that is between what we have to given to 
+                 user input.Here we have to fix the limit.it is going to generate the random numbers
+                 between the given limit.
+*
+*  @descriptipn: Declaring the function and passing the userinput as argument.
+*  @function   : Diplayname takes the userinput and print it with some sentence.                    
+*/ 
     findNumber(low,high,readline){
         var mid = low + Math.floor((high - low)/2)
         console.log(mid)
@@ -683,7 +706,15 @@ isAnagram(a,b){
     },
     
 /* ***************************** insertionsort algorithm ********************************/
-    
+/* insertion sort
+* Purpose      : It is a insertion sort form sorting.it is going to sort a numbers or variable in
+*                the ascending and descending order.Taken input from the user.It is going 
+*                to check the next element.If it is bigger than this then it should be 
+*                swapped.
+*
+*  @descriptipn: Declaring the function and passing the userinput as argument.
+*  @function   : Diplayname takes the userinput and print it with some sentence.                    
+*/     
     insertionsort(arr){
         var a;
         for(let i=0;i<arr.length;i++){
@@ -699,7 +730,15 @@ isAnagram(a,b){
     },
 
 /* ******************************* bubblesort algorithm**********************************/
-     
+/* bubble sort
+* Purpose      : It is a bubble form sorting.it is going to sort a numbers or variable in
+*                the ascending and descending order.Taken input from the user.It is going 
+*                to check the next element.If it is bigger than this then it should be 
+*                swapped.
+*
+*  @descriptipn: Declaring the function and passing the userinput as argument.
+*  @function   : Diplayname takes the userinput and print it with some sentence.                    
+*/   
     bubblesort(arr){
         var a;
         for(let i=0;i<arr.length;i++){
@@ -715,7 +754,14 @@ isAnagram(a,b){
     },
 
 /* ******************************** mergesort algorithm**********************************/
-   
+ /* mergesort
+* Purpose      : It is a mergesort form sorting.it is going to sort a numbers or variable in
+                 the ascending and descending order.Taken input from the user.It is going to check the
+                 next element.If it is bigger than this then it should be swapped.
+*
+*  @descriptipn: Declaring the function and passing the userinput as argument.
+*  @function   : Diplayname takes the userinput and print it with some sentence.                    
+*/  
     mergesort(arr){
         if(arr.length === 1){
             return arr;
@@ -748,7 +794,13 @@ isAnagram(a,b){
     },
 
  /* *************vendingmachine calculate total notes counts entered amount*************/   
-    
+/* Vending Machine
+* Purpose     : It is going to generate the seperate and multiple amount based on our user
+                requirements.it wil give in the seperate order.
+*
+* @descriptipn: Declaring the function and passing the userinput as argument.
+* @function   : Diplayname takes the userinput and print it with some sentence.                    
+*/   
     vendingMachine(amount, i, notes) {
 		var arr = [1000, 500, 100, 50, 10, 5, 2, 1];
 		if (amount == 0 && i == arr.length) {
@@ -766,7 +818,14 @@ isAnagram(a,b){
     },
 
 /* ************************************ day of week ***********************************/
-    
+/* Day of week
+
+* Purpose     : It is used to calculate the respective day from our given input.
+                that is depends on given day ,month and year.
+*
+* @descriptipn: Declaring the function and passing the userinput as argument.
+* @function   : Diplayname takes the userinput and print it with some sentence.                    
+*/     
     dayOfWeek(d, m, y) {
 		var y0 = y - Math.floor((14 - m) / 12);
 		var x = y0 + Math.floor((y0 / 4)) - Math.floor((y0 / 100)) + Math.floor((y0 / 400));
@@ -776,7 +835,12 @@ isAnagram(a,b){
     },
 
 /* ********************* temperature convertion depending on user************************/
-    
+/* Temperature Conversion based on formulae
+ 
+* Purpose     : It is used to calculate the temperature based on our formulae.
+* @descriptipn: Declaring the function and passing the userinput as argument.
+* @function   : Diplayname takes the userinput and print it with some sentence.                    
+*/     
     temperaturConversion(temp, i) {
 		var ctof, ftoc;
 		if (i == 1) {
@@ -790,7 +854,12 @@ isAnagram(a,b){
     },
 
 /* *************calculating monthly payment input taken from command line***************/    
-    
+/* Monthly payment
+
+* Purpose      : It is used to calculate the EMI depends on formulae.
+* @descriptipn : Declaring the function and passing the userinput as argument.
+* @function    : Diplayname takes the userinput and print it with some sentence.                    
+*/      
     payment(p,y,r){
         var n=12*y;
         var r1=r/(12*100);
@@ -799,7 +868,13 @@ isAnagram(a,b){
     },
 
 /* ********Convrting decimal to binary number and binary number display base 2***********/
-    
+/* Convert to Binary
+
+* Purpose      :It is used to generate the random numbers that should converted into 
+                Binary form.
+* @descriptipn :Declaring the function and passing the userinput as argument.
+* @function    :Diplayname takes the userinput and print it with some sentence.                    
+*/    
     tobinary(num){
         var str = num.toString();
         var bin = (+str).toString(2);
@@ -825,7 +900,13 @@ isAnagram(a,b){
     },
 
 /* ************************** squareroot of given number********************************/
-    
+/* Square root of a number
+
+* Purpose     :It is used to generate the random numbers that can be squared by a formula
+               finally that must be in positive value.
+* @descriptipn:Declaring the function and passing the userinput as argument.
+* @function   :Diplayname takes the userinput and print it with some sentence.                    
+*/ 
     sqrtfun(num){
         if(num>0){
             var t=num;
