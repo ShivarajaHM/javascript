@@ -89,7 +89,7 @@ the value of two's power i.e., 2^N value.
         var sum=0;
         for(let i=1;i<=number;i++)
         {
-            sum=1/i;
+            sum=sum+(1/i);
             console.log(sum);
         }
         console.log("Nth harmonic Value is :"+sum);
@@ -154,7 +154,7 @@ the value of two's power i.e., 2^N value.
 
 //*********************************** Coupon Numbers **************************************/
 /*8. Coupon Numbers
-*------------------
+*
 * @purpose : Given N distinct Coupon Numbers, how many random numbers do you 
 *need to generate distinct coupon number? This program simulates this random process.
 *
@@ -177,7 +177,7 @@ the value of two's power i.e., 2^N value.
 
 //*********************************** 2D Array **************************************/
 /*9. 2D Array
-*------------------
+*
 * @purpose : Given N distinct Coupon Numbers, how many random numbers do you 
 *need to generate distinct coupon number? This program simulates this random process.
 *
@@ -523,7 +523,7 @@ isAnagram(a,b){
         if(x.length==y.length){
             var j=0;
             while(j<x.length){
-            for(let i=0;i<x.length;i++){
+            for(let i=j;i<x.length;i++){
                 if(x[j]!=y[i]){
                     return false;
                 }else{
@@ -688,20 +688,33 @@ isAnagram(a,b){
 
 /* ******************************* file call function **********************************/   
     
-    fileCall() 
+    fileCall(path) 
     {
         var fileStream = require('fs');
-        var f = fileStream.readFileSync('../file.txt', 'utf8');
+        var f = fileStream.readFileSync(path, 'utf8');
         var arr = f.split(' ');
         return arr;
     },
+
+    writeFile(filename,Data)
+    {
+        const fs = require('fs')
+        fs.writeFile(filename,Data,function(err)
+        {
+            if(err)
+            {
+                return console.log(err);
+            }
+
+        });
+    }, 
 
 /* ***************************** create array function *********************************/
     
     createArray(num) {
 		var arr = [];
 		for (let index = 0; index < num; index++)
-			arr[index] = readline.questionInt("Enter the element");
+			arr[index] = readline.questionInt("Enter the element ");
 		return arr;
     },
     
