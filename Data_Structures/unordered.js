@@ -1,5 +1,5 @@
-/************************************************************
- * Execution    :   1. cmd> node unordered.js
+/*************************************************************************************
+ * Execution    :   1.default node           cmd> node unordered.js
  *                   
  *                  
  * 
@@ -13,7 +13,7 @@
  * @version     :   1.0
  * @since       :   11-02-2019
  * 
- * **********************************************************/
+ * *********************************************************************************/
 
  const read = require('readline-sync');
 var ll = require('../Data_Structures/Implementation/listutil');
@@ -37,6 +37,7 @@ try {
     }
     var display = linklist.display();
     console.log(display);
+    
     util.writeFile('file.txt', display)
 } catch (err) {
     console.error(err);

@@ -1,5 +1,5 @@
-/************************************************************
- * Execution    :   1. cmd> node orderedlist.js
+/************************************************************************************
+ * Execution    :   1.default node       cmd> node orderedlist.js
  *                   
  * 
  * Purpose      :   Search a element if present remove it otherwise add it to the file.
@@ -12,7 +12,7 @@
  * @version     :   1.0
  * @since       :   11-02-2019
  * 
- * **********************************************************/
+ * ***********************************************************************************/
 /**
 * 'readline'helps to have conversation with the user via a console,
 * '-sync' helps readline to sync even when the input/output stream is redirected.
