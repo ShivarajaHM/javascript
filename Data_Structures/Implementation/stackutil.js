@@ -1,3 +1,17 @@
+/*****************************************************************************************
+ * 
+ * 
+ * Purpose      :   Stack implementation.
+ * 
+ * @description
+ * 
+ * @file        :   stackutil.js
+ * @overview    :   Stack implementation push pop peek and display function.
+ * @author      :   Shivaraja H M <shivumgc@gmail.com>
+ * @version     :   1.0
+ * @since       :   12-02-2019
+ * 
+ * *************************************************************************************/
 class Stack {
     constructor() {
         this.items = [];

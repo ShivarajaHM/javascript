@@ -15,7 +15,7 @@
  * 
  * *********************************************************************************/
 
- const read = require('readline-sync');
+const read = require('readline-sync');
 var ll = require('../Data_Structures/Implementation/listutil');
 var util = require('../Utility/utility');
 try {
@@ -24,8 +24,8 @@ try {
     let data = util.fileCall('file.txt');
     for (let index = 0; index < data.length; index++)
         linklist.add(data[index]);
-    var display = linklist.display();
-    console.log(display);
+        var display = linklist.display();
+        console.log(display);
     let name = read.question("Enter the data you want to search ");
     var check = linklist.search(name);
     console.log(check);

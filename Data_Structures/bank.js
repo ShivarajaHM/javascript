@@ -16,7 +16,7 @@
  * 
  * *************************************************************************************/
 
-var util=require('../Data_Structures/Implementation/queueutil')
+var util=require('./Implementation/queueutil')
 var readline=require('readline-sync')
 function Queue() 
 { 
