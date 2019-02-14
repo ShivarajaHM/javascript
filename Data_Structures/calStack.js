@@ -13,12 +13,18 @@
  * @since       :   13-02-2019
  * 
  * *************************************************************************************/
-var access = require('../Data_Structures/Implementation/stackutil');
+/**
+ * To require the required files.
+ */
+ var access = require('../Data_Structures/Implementation/stackutil');
 var access1 = require('../Data_Structures/Implementation/queueutil');
 var utility = require('../Data_Structures/Implementation/bintree');
 var util=require('../Utility/utility')
 var readline = require('readline-sync');
 var take=require('util');
+/**
+ * function defination.
+ */
 function calender() {
     var month = +process.argv[2];
     var year = +process.argv[3];
@@ -27,7 +33,7 @@ function calender() {
     console.log(answer);
 
     var week = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-    var dates = [0, 31, 28, 31, 30, 31, 31, 30, 31, 30, 31, 30, 31];
+    var dates = [0, 31, 28, 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
     var months=["", "Jan", "Feb", "March", "April", "May", "Jun", "July", "Augest", "Sept", "Oct", "Nov", "Dec"];
 
     var leap = utility.findLeapYear(year);
@@ -76,4 +82,7 @@ function calender() {
 console.log("\n\n\n");
 
 }
+/**
+ * function calls.
+ */
 calender();

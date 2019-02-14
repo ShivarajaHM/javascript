@@ -15,11 +15,17 @@
  * @since       :   13-02-2019
  * 
  * *************************************************************************************/
-var access = require("../Data_Structures/Implementation/listutil");
+/**
+ * To require the required files.
+ */
+ var access = require("../Data_Structures/Implementation/listutil");
 var readline = require("readline-sync");
 var take = require("util");
 var filestream = require("fs");
 var utility = require("../Utility/utility");
+/**
+ * function defination
+ */
 function hashing() {
   try {
     var fileRead = filestream.readFileSync("hash.txt", "utf8");
@@ -72,9 +78,11 @@ function hashing() {
     for (let index = 0; index < 10; index++) {
       flag = true;
       take.print(index + " result slot: ");
+     
+      
       try {
-        console.log(arr[index].printList());
-        str = str + arr[index].printList();
+        console.log(arr[index].display());
+        str = str + arr[index].display();
       } catch (err) {
         console.log("Empty index");
       }
@@ -86,4 +94,7 @@ function hashing() {
     console.log(error.message);
   }
 }
+/**
+ * function calls.
+ */
 hashing();

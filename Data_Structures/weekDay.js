@@ -13,7 +13,10 @@
  * @since       :   13-02-2019
  * 
  * *************************************************************************************/
-var D=require('../Data_Structures/Implementation/queueutil')
+/**
+ * To require the required files.
+ */
+ var D=require('../Data_Structures/Implementation/queueutil')
 var M=require('../Data_Structures/Implementation/bintree');
 var N = require('../Utility/utility');
 var T=require('util')

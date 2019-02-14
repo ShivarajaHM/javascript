@@ -15,9 +15,14 @@
  * @since       :   12-02-2019
  * 
  * *************************************************************************************/
-
+/**
+ * To require the required files.
+ */
 var readline = require("readline-sync");
 var accessDs = require("../Data_Structures/Implementation/queueutil");
+/**
+ * function defination.
+ */
 function palindromeCheck() {
   try {
     var deque = new accessDs.Deque();
@@ -56,4 +61,7 @@ function palindromeCheck() {
     console.log(error.message);
     }
 }
+/**
+ * function calls.
+ */
 palindromeCheck();

@@ -13,15 +13,16 @@
 * @since       :   11-02-2019
 * 
 * *************************************************************************************/
+// ********************************* Required functions *******************************/
 
-
+// ************************************* Node *****************************************/
 class Node {
     constructor(data) {
         this.data = data;
         this.next = null;
     }
 }
-
+// ********************************* LinkedList **************************************/
 class LinkedList {
     constructor() {
         this.first = null;
@@ -141,8 +142,64 @@ class LinkedList {
         this.size--;
         return n;
       }
+      printList() {
+        try {
+          var curr = this.head;
+          var str = "";
+          while (curr) {
+            str += curr.data + " ";
+            curr = curr.next;
+          }
+          return str;
+        } catch (error) {
+          console.log(error.message);
+        }
+      }
+      addele(data) {
+        try {
+          var node = new Node(data);
+          var current = this.head;
+          if (this.head == null) {
+            this.head = node;
+          } else {
+            current = this.head;
+            while (current.next) {
+              current = current.next;
+            }
+            current.next = node;
+          }
+          this.size++;
+        } catch (error) {
+          console.log(error.message);
+        }
+      } 
+      removeItem(data) {
+        try {
+          var current = this.head;
+          var prev = null;
+    
+          while (current != null) {
+            
+            if (current.data == data) {
+              if (prev == null) {
+                this.head = current.next;
+              } else {
+                prev.next = current.next;
+              }
+              this.size--;
+              return true;
+            }
+            prev = current;
+            current = current.next;
+          }
+          return false;
+        } catch (error) {
+          console.log(error.message);
+        }
+      }
 
 }
+// ************************************ LinkedList1 **************************************/
 class LinkedList1 {
     /**
      * Linked List class has two properties, where head stores the first node of a List,
@@ -153,33 +210,17 @@ class LinkedList1 {
       this.size = null;
     }
   
-    /**
-     * to add data to the end of the list
-     * @param:  String to add.
-     */
     add(data) {
       try {
         var node = new Node(data);
-        /**
-         * To store current data
-         */
         var current = this.head;
-        /**
-         * if list is empty, add the data and make it head
-         */
         if (this.head == null) {
           this.head = node;
         } else {
           current = this.head;
-          /**
-           * Iterate to the end of the list
-           */
           while (current.next) {
             current = current.next;
           }
-          /**
-           * Add the node
-           */
           current.next = node;
         }
         this.size++;
@@ -187,20 +228,10 @@ class LinkedList1 {
         console.log(error.message);
       }
     }
-    /**
-     * Searches for item in the list. It need the item and returns a boolean value.
-     * @param : String to search.
-     */
     search(data) {
       try {
         var temp = this.head;
-        /**
-         * Iterate to the end of the list
-         */
         while (temp) {
-          /**
-           * Return true if the passed data is equal to the data, else return false
-           */
           if (temp.data == data) {
             return true;
           }
@@ -211,19 +242,12 @@ class LinkedList1 {
         console.log(error.message);
       }
     }
-    /**
-     * Removes data from the list. It need the data and modifies the list.
-     * @param : data to accept string.
-     */
     removeItem(data) {
       try {
         var current = this.head;
         var prev = null;
   
         while (current != null) {
-          /**
-           * comparing data with current data. If found, then remove and return true .
-           */
           if (current.data == data) {
             if (prev == null) {
               this.head = current.next;
@@ -241,9 +265,7 @@ class LinkedList1 {
         console.log(error.message);
       }
     }
-    /**
-     * prints the list items
-     */
+    
     printList() {
       try {
         var curr = this.head;
@@ -257,41 +279,25 @@ class LinkedList1 {
         console.log(error.message);
       }
     }
-    /**
-     * To insert an element at the given index in list.
-     * @param: {element}: accepts element to add.
-     *         {index}: Number to specify the index to add the element.
-     */
+    
     insertAt(element, index) {
       try {
         if (index > 0 && index > this.size) return false;
         else {
-          /**
-           * Create a new node and pass the element
-           */
           var node = new Node(element);
           var curr, prev;
           curr = this.head;
-          /**
-           * add the element to the first index
-           */
           if (index == 0) {
             node.next = this.head;
             this.head = node;
           } else {
             curr = this.head;
             var it = 0;
-            /**
-             * iterate over the list to find the position to insert
-             */
             while (it < index) {
               it++;
               prev = curr;
               curr = curr.next;
             }
-            /**
-             * Adding the element.
-             */
             node.next = curr;
             prev.next = node;
           }
@@ -301,11 +307,7 @@ class LinkedList1 {
         console.log(error.message);
       }
     }
-    /**
-     * To get the position of the index.
-     * @param {array} arr
-     * @param {Number} num
-     */
+
     addpos(arr, num) {
       try {
         for (let i = 0; i < arr.length - 1; i++) {
@@ -319,9 +321,7 @@ class LinkedList1 {
         console.log(error.message);
       }
     }
-    /**
-     * To print the details of shares 
-     */
+
     printShares() {
       var arr = [];
       if (this.head == null) {
@@ -335,17 +335,11 @@ class LinkedList1 {
         return arr;
       }
     }
-    /**
-     * To remove the share from the stock
-     * @param {any} element 
-     */
+    
     removeStock(element) {
       var temp = this.head;
       var prev = null;
-  
-      // iterate over the list
       while (temp != null) {
-        // comparing element & if found then remove
         var stock = temp.data;
         if (stock.name == element || stock.symbol == element) {
           if (prev == null) {
@@ -353,9 +347,6 @@ class LinkedList1 {
           } else {
             prev.next = temp.next;
           }
-          /**
-           * To decrement the size of the LinkedList
-           */
           this.size--;
           return temp.data;
         }
@@ -369,3 +360,4 @@ class LinkedList1 {
 module.exports = {
     LinkedList,LinkedList1
 }
+// ******************************************* End **************************************/

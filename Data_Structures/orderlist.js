@@ -15,15 +15,12 @@
  * ***********************************************************************************/
 
 try {
+  /**
+  * To require the required files.
+  */  
     var readline = require("readline-sync");
-    /*
-  For accessing data from utility file and utilityDataStructure
-  */
     var access = require("../Utility/utility");
     var accessDs = require("../Data_Structures/Implementation/listutil");
-    /**
-     * Read the file and store it an array
-     */
     var fs = require("fs");
     var f = fs.readFileSync("file.txt", "utf8");
     var arr1 = f.trim().split(" ");
@@ -33,25 +30,13 @@ try {
       arr[i] = parseInt(arr1[i]);
     }
     access.bubblesort(arr);
-    /**
-     * Create a linked list object
-     */
     var linkedList = new accessDs.LinkedList1();
-    /**
-     * loop till the end of the lenght of array and add all the elements to the list.
-     */
     for (let i = 0; i < arr.length; i++) {
       linkedList.add(arr[i]);
     }
-    /**
-     * To print the contents of the list
-     */
     var contents = linkedList.printList();
     console.log("Data in the list: " + contents);
     var valid = false;
-    /**
-     * Ask user to enter a number to search in the list, Validation to accept only numbers.
-     */
     do {
       var number = readline.question("Enter the number: ");
       if (isNaN(number)) {
@@ -60,9 +45,6 @@ try {
         valid = true;
       }
     } while (!valid);
-    /**
-     * Check whether the number is present in the list or not by using search function.
-     */
     var result = linkedList.search(number);
     console.log("number in the list: " + result);
     /**

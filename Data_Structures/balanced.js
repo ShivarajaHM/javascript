@@ -13,9 +13,14 @@
  * @since       :   12-02-2019
  * 
  * *************************************************************************************/
-
+/**
+ * To require the required files.
+ */    
 var Utility=require('../Data_Structures/Implementation/stackutil');
 var read=require('readline-sync');
+/**
+ * To write function.
+ */
 function Stack(){
 var stack=new Utility.Stack;
 var st = new Utility.Stack;
@@ -52,9 +57,14 @@ var st = new Utility.Stack;
     }
     return false;
 }
+/**
+ * function calls .
+ */
 var bol = Stack();
 
-
+/**
+ * To check balanced or unbalanced.
+ */
 if (bol) {
     console.log("Mathematical expression is balanced");
 

@@ -14,11 +14,16 @@
  * @since       :   13-02-2019
  * 
  * *************************************************************************************/
-var take = require('util');
+/**
+ * To require the required files.
+ */
+ var take = require('util');
 var path = require('../Utility/utility');
 var pa=require('../Data_Structures/Implementation/bintree')
-
 var readline = require('readline-sync');
+/**
+ * Function defination.
+ */
 function calender() {
     var month = +process.argv[2];
     var year = +process.argv[3];
@@ -61,4 +66,7 @@ function calender() {
     console.log("\n\n");
 
 }
+/**
+ * function calls
+ */
 calender();

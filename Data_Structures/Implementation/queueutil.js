@@ -27,6 +27,7 @@
         this.capacity = capacity;
         var t = new items[capacity];
     }
+
     enque(data) {
         console.log(data);
         if (this.top == this.capacity - 1) {
@@ -40,6 +41,7 @@
         this.items[++this.rear] = data;
 
     }
+
     deque() {
         if (this.front == -1) {
             console.log("Queue is empty");
@@ -54,12 +56,11 @@
         return ele;
     }
 
-
-
     getSize() {
         return this.size;
 
     }
+
     isempty() {
         if (size == 0)
             return true;
@@ -67,6 +68,7 @@
             return false;
 
     }
+
     display() {
         var res = "";
         for (var i = this.front; i <= this.rear; i++) {
@@ -165,6 +167,19 @@ class QueueLinked
         this.size--;
         return n;
     }
+    print() {
+        try {
+          var string = "";
+          var temp = this.head;
+          while (temp) {
+            string = string + " " + temp.data;
+            temp = temp.next;
+          }
+          return string;
+        } catch (error) {
+          console.log(error.message);
+        }
+      }
     getelement()
     {
         var curr = this.head;
@@ -310,3 +325,4 @@ module.exports = { Queue,Deque,QueueLinked,
     }
 
 }
+// **************************************** end ***************************************/

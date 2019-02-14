@@ -15,9 +15,14 @@
  * @since       :   12-02-2019
  * 
  * *************************************************************************************/
-
+/**
+ * To require the required files.
+ */
 var util=require('./Implementation/queueutil')
 var readline=require('readline-sync')
+/**
+ * function defination.
+ */
 function Queue() 
 { 
     var req = new util.Queue;
@@ -25,14 +30,17 @@ function Queue()
     var totalbankcash = 10000;
     var flag = true
     var ask = readline.question("Enter the total number of people ");
-    
+    var amt=totalbankcash;
        if(ask>0){
         for (var i = 1; i <= ask; i++) {
+            
             var ans = readline.question("Press 1 to deposit the cash\npress 2 to withdraw the cash \n ");
             if (ans == 1) {
                 var amount = readline.question("Enter total amount do you want to Deposit : ");
                 var put = req.enque(Number(amount));
                 flag= true;
+                amt=Number(amt)+Number(amount);
+                console.log("balance amount : "+amt);
                 
             }
             else if (ans == 2) {
@@ -40,6 +48,8 @@ function Queue()
                 var get = req.enque(Number(-amount));
                 
                 flag= true;
+                amt=Number(amt)-Number(amount);
+                console.log("balance amount : "+amt);
                 
             }
             else {
@@ -71,4 +81,7 @@ function Queue()
         }
     }
 }
+/**
+ * function calls.
+ */
 Queue();
