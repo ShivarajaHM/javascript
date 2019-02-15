@@ -56,6 +56,7 @@ try {
       console.log();
     }
     console.log("\n");
-  } catch (error) {
+  } 
+  catch (error) {
     console.log(error.message);
   }

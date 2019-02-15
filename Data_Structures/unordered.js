@@ -22,7 +22,6 @@ var ll = require('../Data_Structures/Implementation/listutil');
 var util = require('../Utility/utility');
 try {
     var linklist = new ll.LinkedList();
-
     let data = util.fileCall('file1.txt');
     for (let index = 0; index < data.length; index++)
         linklist.add(data[index]);
@@ -33,13 +32,12 @@ try {
     console.log(check);
     if (check) {
         linklist.remove(name);
-    }
+     }
     else {
         linklist.add(name);
-    }
+     }
     var display = linklist.display();
-    console.log(display);
-    
+    console.log(display);   
     util.writeFile('file1.txt', display)
 } catch (err) {
     console.error(err);

@@ -36,17 +36,21 @@ var st = new Utility.Stack;
         }
         else {
             switch (ch) {
-                case ')': if (st.pop() != '(') {
+                case ')':
+                 if (st.pop() != '(') {
                     return false;
-                }
-                    break;
-                case ']': if (st.pop() != '[') {
+                    }
+                break;
+                case ']': 
+                 if (st.pop() != '[') {
                     return false;
-                }
-                    break;
-                case '}': if (st.pop() != '{') {
+                 }
+                break;
+                case '}': 
+                 if (st.pop() != '{') {
                     return false;
-                } break;
+                 } 
+                break;
             }
         }
 

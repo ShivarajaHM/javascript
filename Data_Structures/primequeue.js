@@ -26,17 +26,15 @@
     for (let i = 0; i < 1000; i++) {
       if (utility.isPrime(i)) 
       arr.push(i);
-    }
+     }
     for (let i = 0; i < arr.length; i++) {
       for (let j = i + 1; j < arr.length; j++) {
-        if (utility.isAnagram(arr[i], arr[j])) {
-                     
+        if (utility.isAnagram(arr[i], arr[j])) {          
           queue.enqueue(Number(arr[i]));
           queue.enqueue(Number(arr[j]));
         }
       }
-    }
-    
+    }   
     console.log(" Anagrams in the range 0 to 1000 are:\n" + arr);
   } catch (error) {
     console.log(error.message);

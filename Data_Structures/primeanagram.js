@@ -48,27 +48,28 @@
           var v = "";
           for (let i = 0; i < b.length; i++) {
             v = v + b[i];
-          }
+           }
           if (!arr.includes(v)) {
             arr.push(v);
             array[i][j] = prime;
             j++;
-          }
-        } else {
+           }
+        } 
+        else {
           var a1 = "" + prime;
           var b1 = a1.split("");
           b1.sort();
           var v1 = "";
           for (let i = 0; i < b1.length; i++) {
             v1 = v1 + b[i];
-          }
+           }
           if (!arr1.includes(v1)) {
             arr1.push(v1);
             j = 1;
             range = range + 100;
             i++;
             array[i][j] = prime;
-          }
+           }
         }
       }
     }
@@ -80,9 +81,9 @@
     for (var i = 0; i < array.length; i++) {
       for (var j = 0; j < array[i].length; j++) {
         take.print(array[i][j] + " ");
-      }
+       }
       console.log();
-    }
+     }
   } catch (error) {
     console.log(error.message);
   }
