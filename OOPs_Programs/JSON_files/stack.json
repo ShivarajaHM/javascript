@@ -1,0 +1,22 @@
+{
+    "company": [
+        {
+            "name": "Facebook",
+            "symbol": "F",
+            "share": 210,
+            "price": 2000
+        },
+        {
+            "name": "Amazon",
+            "symbol": "A",
+            "share": 300,
+            "price": 6000
+        },
+        {
+            "name": "Google",
+            "symbol": "G",
+            "share": 500,
+            "price": 500
+        }
+    ]
+}

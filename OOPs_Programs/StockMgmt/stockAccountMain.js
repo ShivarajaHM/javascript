@@ -1,7 +1,7 @@
 /* **************************************************************************************
  * Execution        : Default node             cmd> node stockAccountMain.js 
  * @file            : stockAccountMain.js
- * @overview        : StockAccount.java implements a data type that might be used by a financial institution to keep track of customer information.
+ * @overview        : StockAccount.js implements a data type that might be used by a financial institution to keep track of customer information.
                       The StockAccount class also maintains a list of CompanyShares object which has
                       Stock Symbol and Number of Shares as well as DateTime of the transaction. When
                       buy or sell is initiated StockAccount checks if CompanyShares are available and

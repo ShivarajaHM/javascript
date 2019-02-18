@@ -180,6 +180,7 @@ class QueueLinked
           console.log(error.message);
         }
       }
+      
     getelement()
     {
         var curr = this.head;
