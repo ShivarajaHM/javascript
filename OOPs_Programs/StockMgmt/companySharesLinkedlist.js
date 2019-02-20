@@ -12,8 +12,7 @@ class CompanyShares {
        * Pass the path of json file and read it and add the objects using add method of linked list
        */
       var data = JSON.parse(
-        file.readFileSync(
-          "/home/admin1/Documents/javascript/OOPs_Programs/JSON_files/linkedListStock.json"));
+        file.readFileSync("/home/admin1/Documents/javascript/OOPs_Programs/JSON_files/linkedListStock.json"));
       for (let j = 0; j < data.company.length; j++) {
         this.linkedList.add(data.company[j]);
       }

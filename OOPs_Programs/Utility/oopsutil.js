@@ -13,9 +13,7 @@ module.exports = {
     * condition to check whether the input is 10 digit number.
     */
     while (isNaN(mobilenumber) || mobilenumber.length != 10) {
-      mobileNumber = readLine.question(
-        "\nEnter valid phone number(10 digits only) : "
-      );
+      mobileNumber = readLine.question("\nEnter valid phone number(10 digits only) : ");
     }
     /**
     * Replacing name, full name, mobileNumebr, date with proper values passed using regular expressions.

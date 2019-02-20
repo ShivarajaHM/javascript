@@ -15,7 +15,8 @@ class InventoryFactory{
             */
             data.ListOfStocks.push({shareName:name,noOfShares:shares,price:cost});
             /**
-            * Use function JSON.stringify() to convert data into a string and write it to JSON file
+            * Use fu
+            * nction JSON.stringify() to convert data into a string and write it to JSON file
             */
             file.writeFileSync('/home/admin1/Documents/javascript/OOPs_Programs/Inventory/inventoryManagerStocks.json',JSON.stringify(data));
 

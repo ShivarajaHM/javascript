@@ -15,7 +15,7 @@ class companySharesQueue {
         this.queue.enQueue(data.company[j]);
       }
     } catch (err) {
-      console.log("File not found");
+      //console.log("File not found");
     }
   }
   /**

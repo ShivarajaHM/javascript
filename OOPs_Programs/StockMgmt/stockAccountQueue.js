@@ -13,7 +13,7 @@ var readline = require("readline-sync");
 var utility = require("../StockMgmt/companySharesQueue");
 var utility1 = require("../StockMgmt/companySharesStack");
 function main() {
- // try {
+ try {
     /**
      * Create companyShareQueue object to use the add, remove, print functionalities.
      */
@@ -49,8 +49,8 @@ function main() {
           break;
       }
     }
-  //} catch (err) {
-   // console.log(err.message);
- // }
+  } catch (err) {
+   console.log(err.message);
+ }
 }
 main();
