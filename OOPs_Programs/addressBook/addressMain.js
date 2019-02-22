@@ -9,7 +9,7 @@
  * @since           : 19/02/2019
  * **************************************************************************************/
 var prompt = require("readline-sync");
-var access = require('../addressBook/addressBook');
+var access = require('../addressBook/addressbookModel');
 var fs = require("fs");
 /**
  * Read json file data

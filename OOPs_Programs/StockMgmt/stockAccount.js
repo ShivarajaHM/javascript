@@ -265,9 +265,7 @@ class StockAccount {
                             /**
                              * Assign the values to the json object
                              */
-                            this.customerDataJson.customer[
-                                index
-                            ].share = updatedCustomerShare;
+                            this.customerDataJson.customer[index].share = updatedCustomerShare;
                             this.companyDataJson.company[key].share = updatedCompanyShare;
                             this.customerDataJson.customer[index].LastTransaction = time;
                             /**
